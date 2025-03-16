@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+#Mic{display:none;}
+.headertopStyle{
+    color: aqua;
+}
+.popup {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    padding: 10px 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.buton {
+    background-color: #DA4353;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+}	
+@keyframes disparitie {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+#canvas {
+    border: 2px solid black;
+}
+body {
+    background-color: silver;
+    color: #333333;
+    font-family: "Afacad Flux";
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: rgb(40, 40, 40);
+    padding: 40px;
+    text-align: center;
+    border-bottom: 3px solid rgb(113, 113, 113);
+    color: whitesmoke;
+    margin: 0;
+}
+nav {
+    background-color: gray;
+    border-bottom: 3px solid red;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+nav ul {
+    list-style-type: none;
+    
+} 
+.meniu{
+    margin-left: 15%;
+    margin-right: 15%;
+    
+}
+nav > ul {
+    text-align: center;
+}
+nav ul, nav li {
+    margin: 0;
+    padding: 0;
+    
+}  
+nav a {
+    display: block;
+    text-decoration: none;
+    color: #003366; 
+    font-weight: bold;
+    transition: background-color 3s, color 3s, font-size 3s;
+}
+nav>ul.meniu>li>ul.submeniu {
+    display: none;
+}
+nav>ul.meniu>li:hover>ul.submeniu {
+    display: block;
+}
+ul.meniu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+ul.meniu>li {
+    flex:1;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+}
+ul.submeniu>li {
+    flex:1 1;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background-color: gray;
+}
+nav a:hover {
+    color: red;
+    background-color: rgb(164, 164, 164);
+}
+main section:first-child{
+    margin-top: 20px;
+}
+section{
+    border: 1px solid red;
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px;
+    padding: 20px;
+    animation: apeal2 2s;
+
+}
+
+section h2{
+    margin: 2%;
+    animation: pulse 1.5s 1s infinite alternate;
+}
+section > h2:hover{
+    animation-play-state: paused;
+  }
+section h2::first-line{
+    font-size:100%; 
+    color: darkmagenta;
+}
+section h2::before{
+    content: "🔴"; 
+    font-size: 100%;
+}
+article{
+    border: 1px solid red;
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    animation: apeal2 2s;
+
+}
+article h2{
+    margin: 2%;
+    animation: pulse 1.5s 1s infinite alternate;
+}
+article > h2:hover{
+    animation-play-state: paused;
+  }
+article h2::first-line{
+    font-size:100%; 
+    color: darkmagenta;
+}
+article h2::before{
+    content: "🔴"; 
+    font-size: 100%;
+}
+#origini{
+    grid-area:o;
+}
+#legi{
+    grid-area:le;
+}
+#razboi{
+    grid-area:r;
+}
+#lagare{
+    grid-area:la;
+}
+#pogromuri{
+    grid-area:p;
+}
+#solfin{
+    grid-area:s;
+}
+#final{
+    grid-area:f;
+}
+.grid-container{
+    padding:5px;
+    display:grid;
+    grid-gap:5px;
+    grid-template-areas:
+    "o o o o le le le le le"
+    "r r r la la la la p p"
+    "r r r la la la la p p"
+    "r r r la la la la p p"
+    "s s s s f f f f f";
+}
+
+footer {
+    background-color: rgb(57, 57, 57);
+    padding: 40px;
+    text-align: center;
+    color: whitesmoke;
+    margin: 0;
+    border-top: 3px solid red;
+}
+footer > a {
+    color: #003366;
+    background-color: gray;
+    padding: 10px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 15px;
+}
+footer > a:hover {
+    font-size: 20px;
+}
+footer > a:active {
+    background-color: red;
+    color: white;
+}
+footer > aside > h2::after {
+    content: "🕎";
+    margin-left: 15px;
+}
+@keyframes pulse  {
+    0%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 0.75;
+    }
+    100%{
+        opacity: 1;
+    }
+  }
+@keyframes apeal2{
+    0%{
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100%{
+      opacity:1;
+      transform: translateY(0px);
+    }
+  }

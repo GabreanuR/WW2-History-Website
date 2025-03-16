@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+#Mic
+ {position:absolute;
+      top:15px;
+      left:5px; }
+body {
+    background-color: silver;
+    color: #333333;
+    font-family: "Afacad Flux";
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: rgb(40, 40, 40);
+    padding: 40px;
+    text-align: center;
+    border-bottom: 3px solid rgb(113, 113, 113);
+    color: whitesmoke;
+    margin: 0;
+}
+nav ul{
+    list-style-type: none;
+  }
+  nav ul, nav li{
+    margin:0;
+    padding:0;
+  }
+  nav a{
+    text-decoration: none;
+    color: #003366;
+    display: block;
+    font-weight: bold;
+    transition: background-color 3s, color 3s, font-size 3s;
+  }
+
+
+
+  nav {
+    background-color: gray;
+    height: auto;
+    width:50%;
+    position:sticky;
+    top:0;
+    z-index:3;
+    display:none;
+  }
+input:checked ~ nav {
+    display: block;
+  }
+  nav>ul.meniu>li>ul.submeniu{
+    display: none;
+  }
+  nav>ul.meniu>li:hover>ul.submeniu{
+    width:100%;
+    display: block;
+    position: absolute;
+    top:0;
+    left:100%;
+  }
+  ul.meniu{
+    display:flex;
+    flex-flow:column nowrap;
+  /*  justify-content: space-around;*/
+  }
+  ul.meniu>li{
+    position:relative;
+    height:auto;
+    line-height: 50px;
+    text-align: center;
+    flex:1;
+  }
+  ul.submeniu>li{
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: gray;
+  }
+  nav a:hover{
+    color: red;
+    background-color: rgb(164, 164, 164);
+    /*font-size: 18px;*/
+    animation: sus 0.5s;
+  }
+
+
+
+
+  
+main section:first-child{
+    margin-top: 20px;
+}
+section{
+    box-sizing: border-box;
+    width:100%;
+    padding: 20px;
+    border: 1px solid red;
+    background-color: white;
+    margin-top: 15px;
+    animation: apeal2 2s;
+    
+}
+
+section h2{
+    margin: 2%;
+    animation: pulse 1.5s 1s infinite alternate;
+}
+section > h2:hover{
+    animation-play-state: paused;
+  }
+section h2::first-line{
+    font-size:100%; 
+    color: darkmagenta;
+}
+section h2::before{
+    content: "🔴"; 
+    font-size: 100%;
+}
+article{
+    box-sizing: border-box;
+    width:100%;
+    padding: 20px;
+    border: 1px solid red;
+    background-color: white;
+    margin-top: 15px;
+    animation: apeal2 2s;
+
+}
+article h2{
+    margin: 2%;
+    animation: pulse 1.5s 1s infinite alternate;
+}
+article > h2:hover{
+    animation-play-state: paused;
+  }
+article h2::first-line{
+    font-size:100%; 
+    color: darkmagenta;
+}
+article h2::before{
+    content: "🔴"; 
+    font-size: 100%;
+}
+/*
+#origini{
+    grid-area:o;
+}
+#legi{
+    grid-area:le;
+}
+#razboi{
+    grid-area:r;
+}
+#lagare{
+    grid-area:la;
+}
+#pogromuri{
+    grid-area:p;
+}
+#solfin{
+    grid-area:s;
+}
+#final{
+    grid-area:f;
+}
+.grid-container{
+    padding:5px;
+    display:grid;
+    grid-gap:5px;
+    grid-template-areas:
+    "o o o o le le le le le"
+    "r r r la la la la p p"
+    "r r r la la la la p p"
+    "r r r la la la la p p"
+    "s s s s f f f f f";
+}
+*/
+footer {
+    background-color: rgb(57, 57, 57);
+    padding: 40px;
+    text-align: center;
+    color: whitesmoke;
+    margin: 0;
+    border-top: 3px solid red;
+}
+footer > a {
+    color: #003366;
+    background-color: gray;
+    padding: 10px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 15px;
+}
+footer > a:hover {
+    font-size: 20px;
+}
+footer > a:active {
+    background-color: red;
+    color: white;
+}
+footer > aside > h2::after {
+    content: "🕎";
+    margin-left: 15px;
+}
+@keyframes pulse  {
+    0%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 0.75;
+    }
+    100%{
+        opacity: 1;
+    }
+  }
+  @keyframes apeal2{
+    0%{
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100%{
+      opacity:1;
+      transform: translateY(0px);
+    }
+  }
